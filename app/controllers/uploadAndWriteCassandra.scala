@@ -58,6 +58,10 @@ class uploadAndWriteCassandra @Inject() extends Controller {
     Ok(views.html.index("Your new application is ready."))
   }
 
+  def viewUpload = Action {
+    Ok(views.html.upload("Upload file to Cassandra"))
+  }
+
   def upload = Action(parse.multipartFormData) { request =>
     request.body.file("filez").map { picture =>
       import java.io.File
@@ -206,7 +210,7 @@ class uploadAndWriteCassandra @Inject() extends Controller {
 
     createSSTableWriterFiles(streamFileParts)
 
-    Ok(s"File uploaded...")
+    Ok(views.html.index(s"File uploaded..."))
   }
 
 

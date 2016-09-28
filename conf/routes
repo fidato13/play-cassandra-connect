@@ -6,8 +6,9 @@
 GET     /                           controllers.uploadAndWriteCassandra.index
 
 #An exmaple of post, uploading file
-POST  /upload          controllers.uploadAndWriteCassandra.upload()
-POST  /custom-upload          controllers.uploadAndWriteCassandra.customUpload()
+#POST  /upload          controllers.uploadAndWriteCassandra.upload()
+GET  /custom-upload          controllers.uploadAndWriteCassandra.viewUpload
+POST  /custom-upload          controllers.uploadAndWriteCassandra.customUpload
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
