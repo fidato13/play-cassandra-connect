@@ -1,0 +1,17 @@
+# removing target files
+.idea/
+.idea_modules/
+projectFilesBackup/
+target/
+.settings/org.eclipse.core.resources.prefs
+.settings/
+logs/
+project/project
+project/target
+/bin/
+.cache-main
+.cache-tests
+.classpath
+.settings
+.project
+.worksheet
